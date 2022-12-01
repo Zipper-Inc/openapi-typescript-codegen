@@ -1,8 +1,10 @@
-import client from 'github-connector';
-
-export default async function main(args: {
+export default async function main({
 {{#each parameters}}
-	{{{name}}}{{>isRequired}}: {{>type}}{{#if default}} = {{{default}}}{{/if}};
+	{{{name}}}{{#if default}} = {{{default}}}{{/if}},
+{{/each}}
+}: {
+{{#each parameters}}
+	{{{name}}}{{>isRequired}}: {{>type}},
 {{/each}}
 }) {
   const res = await client.{{{camelCase serviceName}}}.{{name}}(args);
