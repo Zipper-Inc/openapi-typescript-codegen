@@ -17,6 +17,7 @@ const params = program
     .option('--useOptions', 'Use options instead of arguments')
     .option('--useUnionTypes', 'Use union types instead of enums')
     .option('--exportCore <value>', 'Write core files to disk', true)
+    .option('--exportSamples <value>', 'Write samples to disk', true)
     .option('--exportServices <value>', 'Write services to disk', true)
     .option('--exportModels <value>', 'Write models to disk', true)
     .option('--exportSchemas <value>', 'Write schemas to disk', false)
@@ -39,6 +40,7 @@ if (OpenAPI) {
         useOptions: params.useOptions,
         useUnionTypes: params.useUnionTypes,
         exportCore: JSON.parse(params.exportCore) === true,
+        exportSamples: JSON.parse(params.exportSamples) === true,
         exportServices: JSON.parse(params.exportServices) === true,
         exportModels: JSON.parse(params.exportModels) === true,
         exportSchemas: JSON.parse(params.exportSchemas) === true,

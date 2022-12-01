@@ -20,6 +20,7 @@ export type Options = {
     useOptions?: boolean;
     useUnionTypes?: boolean;
     exportCore?: boolean;
+    exportSamples?: boolean;
     exportServices?: boolean;
     exportModels?: boolean;
     exportSchemas?: boolean;
@@ -58,6 +59,7 @@ export const generate = async ({
     useOptions = false,
     useUnionTypes = false,
     exportCore = true,
+    exportSamples = true,
     exportServices = true,
     exportModels = true,
     exportSchemas = false,
@@ -88,6 +90,7 @@ export const generate = async ({
                 useOptions,
                 useUnionTypes,
                 exportCore,
+                exportSamples,
                 exportServices,
                 exportModels,
                 exportSchemas,
@@ -112,6 +115,7 @@ export const generate = async ({
                 useOptions,
                 useUnionTypes,
                 exportCore,
+                exportSamples,
                 exportServices,
                 exportModels,
                 exportSchemas,

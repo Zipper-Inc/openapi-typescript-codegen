@@ -1455,6 +1455,453 @@ export type SimpleStringWithPattern = string;
 "
 `;
 
+exports[`v2 should generate: ./test/generated/v2/samples/CollectionFormat/collectionFormatService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterArrayCsv: Array<string>;
+    parameterArraySsv: Array<string>;
+    parameterArrayTsv: Array<string>;
+    parameterArrayPipes: Array<string>;
+    parameterArrayMulti: Array<string>;
+}) {
+    const res = await client.collectionFormat.collectionFormat(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Complex/complexTypesService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterObject: {
+        first?: {
+            second?: {
+                third?: string;
+            };
+        };
+    };
+    parameterReference: ModelWithString;
+}) {
+    const res = await client.complex.complexTypes(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Default/serviceWithEmptyTagService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.default.serviceWithEmptyTag(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Defaults/callToTestOrderOfParamsService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterStringWithNoDefault: string;
+    parameterOptionalStringWithDefault: string = 'Hello World!';
+    parameterOptionalStringWithEmptyDefault: string = '';
+    parameterOptionalStringWithNoDefault?: string;
+    parameterStringWithDefault: string = 'Hello World!';
+    parameterStringWithEmptyDefault: string = '';
+    parameterStringNullableWithNoDefault?: string | null;
+    parameterStringNullableWithDefault: string | null = null;
+}) {
+    const res = await client.defaults.callToTestOrderOfParams(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Defaults/callWithDefaultOptionalParametersService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterString: string = 'Hello World!';
+    parameterNumber: number = 123;
+    parameterBoolean: boolean = true;
+    parameterEnum: 'Success' | 'Warning' | 'Error' = 'Success';
+    parameterModel: ModelWithString = {
+        "prop": "Hello World!"
+    };
+}) {
+    const res = await client.defaults.callWithDefaultOptionalParameters(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Defaults/callWithDefaultParametersService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterString: string = 'Hello World!';
+    parameterNumber: number = 123;
+    parameterBoolean: boolean = true;
+    parameterEnum: 'Success' | 'Warning' | 'Error' = 'Success';
+    parameterModel: ModelWithString = {
+        "prop": "Hello World!"
+    };
+}) {
+    const res = await client.defaults.callWithDefaultParameters(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Descriptions/callWithDescriptionsService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterWithBreaks?: string;
+    parameterWithBackticks?: string;
+    parameterWithSlashes?: string;
+    parameterWithExpressionPlaceholders?: string;
+    parameterWithQuotes?: string;
+    parameterWithReservedCharacters?: string;
+}) {
+    const res = await client.descriptions.callWithDescriptions(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Duplicate/duplicateName1Service.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.duplicate.duplicateName1(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Duplicate/duplicateName2Service.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.duplicate.duplicateName2(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Duplicate/duplicateName3Service.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.duplicate.duplicateName3(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Duplicate/duplicateNameService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.duplicate.duplicateName(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Error/testErrorCodeService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    status: string;
+}) {
+    const res = await client.error.testErrorCode(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Header/callWithResultFromHeaderService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.header.callWithResultFromHeader(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/MultipleTags1/dummyAService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.multipleTags1.dummyA(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/MultipleTags1/dummyBService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.multipleTags1.dummyB(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/MultipleTags2/dummyAService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.multipleTags2.dummyA(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/MultipleTags2/dummyBService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.multipleTags2.dummyB(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/MultipleTags3/dummyBService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.multipleTags3.dummyB(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/NoContent/callWithNoContentResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.noContent.callWithNoContentResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Parameters/callWithParametersService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterHeader: string;
+    parameterQuery: string;
+    parameterForm: string;
+    parameterBody: string;
+    parameterPath: string;
+}) {
+    const res = await client.parameters.callWithParameters(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Parameters/callWithWeirdParameterNamesService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterHeader: string;
+    parameterQuery: string;
+    parameterForm: string;
+    parameterBody: string;
+    parameterPath1?: string;
+    parameterPath2?: string;
+    parameterPath3?: string;
+    _default?: string;
+}) {
+    const res = await client.parameters.callWithWeirdParameterNames(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Response/callWithDuplicateResponsesService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.response.callWithDuplicateResponses(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Response/callWithResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.response.callWithResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Response/callWithResponsesService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.response.callWithResponses(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Simple/deleteCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.deleteCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Simple/getCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.getCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Simple/headCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.headCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Simple/optionsCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.optionsCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Simple/patchCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.patchCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Simple/postCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.postCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Simple/putCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.putCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v2 should generate: ./test/generated/v2/samples/Types/typesService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterArray: Array<string>;
+    parameterDictionary: Record<string, string>;
+    parameterEnum: 'Success' | 'Warning' | 'Error';
+    parameterNumber: number = 123;
+    parameterString: string = 'default';
+    parameterBoolean: boolean = true;
+    parameterObject: any = null;
+    id?: number;
+}) {
+    const res = await client.types.types(args);
+
+    return res;
+}
+"
+`;
+
 exports[`v2 should generate: ./test/generated/v2/schemas/$_default.ts 1`] = `
 "/* istanbul ignore file */
 /* tslint:disable */
@@ -4938,6 +5385,591 @@ exports[`v3 should generate: ./test/generated/v3/models/SimpleStringWithPattern.
  * This is a simple string
  */
 export type SimpleStringWithPattern = string | null;
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/CollectionFormat/collectionFormatService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterArrayCsv: Array<string> | null;
+    parameterArraySsv: Array<string> | null;
+    parameterArrayTsv: Array<string> | null;
+    parameterArrayPipes: Array<string> | null;
+    parameterArrayMulti: Array<string> | null;
+}) {
+    const res = await client.collectionFormat.collectionFormat(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Complex/complexParamsService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    id: number;
+    requestBody?: {
+        readonly key: string | null;
+        name: string | null;
+        enabled?: boolean;
+        readonly type: 'Monkey' | 'Horse' | 'Bird';
+        listOfModels?: Array<ModelWithString> | null;
+        listOfStrings?: Array<string> | null;
+        parameters: (ModelWithString | ModelWithEnum | ModelWithArray | ModelWithDictionary);
+        readonly user?: {
+            readonly id?: number;
+            readonly name?: string | null;
+        };
+    };
+}) {
+    const res = await client.complex.complexParams(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Complex/complexTypesService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterObject: {
+        first?: {
+            second?: {
+                third?: string;
+            };
+        };
+    };
+    parameterReference: ModelWithString;
+}) {
+    const res = await client.complex.complexTypes(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Default/serviceWithEmptyTagService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.default.serviceWithEmptyTag(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Defaults/callToTestOrderOfParamsService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterStringWithNoDefault: string;
+    parameterOptionalStringWithDefault: string = 'Hello World!';
+    parameterOptionalStringWithEmptyDefault: string = '';
+    parameterOptionalStringWithNoDefault?: string;
+    parameterStringWithDefault: string = 'Hello World!';
+    parameterStringWithEmptyDefault: string = '';
+    parameterStringNullableWithNoDefault?: string | null;
+    parameterStringNullableWithDefault: string | null = null;
+}) {
+    const res = await client.defaults.callToTestOrderOfParams(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Defaults/callWithDefaultOptionalParametersService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterString: string = 'Hello World!';
+    parameterNumber: number = 123;
+    parameterBoolean: boolean = true;
+    parameterEnum: 'Success' | 'Warning' | 'Error' = 'Success';
+    parameterModel: ModelWithString = {
+        "prop": "Hello World!"
+    };
+}) {
+    const res = await client.defaults.callWithDefaultOptionalParameters(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Defaults/callWithDefaultParametersService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterString: string | null = 'Hello World!';
+    parameterNumber: number | null = 123;
+    parameterBoolean: boolean | null = true;
+    parameterEnum: 'Success' | 'Warning' | 'Error' = 'Success';
+    parameterModel: ModelWithString | null = {
+        "prop": "Hello World!"
+    };
+}) {
+    const res = await client.defaults.callWithDefaultParameters(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Deprecated/deprecatedCallService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameter: DeprecatedModel | null;
+}) {
+    const res = await client.deprecated.deprecatedCall(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Descriptions/callWithDescriptionsService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterWithBreaks?: any;
+    parameterWithBackticks?: any;
+    parameterWithSlashes?: any;
+    parameterWithExpressionPlaceholders?: any;
+    parameterWithQuotes?: any;
+    parameterWithReservedCharacters?: any;
+}) {
+    const res = await client.descriptions.callWithDescriptions(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Duplicate/duplicateName1Service.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.duplicate.duplicateName1(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Duplicate/duplicateName2Service.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.duplicate.duplicateName2(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Duplicate/duplicateName3Service.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.duplicate.duplicateName3(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Duplicate/duplicateNameService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.duplicate.duplicateName(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Error/testErrorCodeService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    status: number;
+}) {
+    const res = await client.error.testErrorCode(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/FormData/postApiFormDataService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameter?: string;
+    formData?: ModelWithString;
+}) {
+    const res = await client.formData.postApiFormData(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Header/callWithResultFromHeaderService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.header.callWithResultFromHeader(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Multipart/multipartRequestService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    formData?: {
+        content?: Blob;
+        data?: ModelWithString | null;
+    };
+}) {
+    const res = await client.multipart.multipartRequest(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Multipart/multipartResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.multipart.multipartResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/MultipleTags1/dummyAService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.multipleTags1.dummyA(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/MultipleTags1/dummyBService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.multipleTags1.dummyB(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/MultipleTags2/dummyAService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.multipleTags2.dummyA(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/MultipleTags2/dummyBService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.multipleTags2.dummyB(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/MultipleTags3/dummyBService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.multipleTags3.dummyB(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/NoContent/callWithNoContentResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.noContent.callWithNoContentResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Parameters/callWithParametersService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterHeader: string | null;
+    parameterQuery: string | null;
+    parameterForm: string | null;
+    parameterCookie: string | null;
+    parameterPath: string | null;
+    requestBody: ModelWithString | null;
+}) {
+    const res = await client.parameters.callWithParameters(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Parameters/callWithWeirdParameterNamesService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterHeader: string | null;
+    parameterQuery: string | null;
+    parameterForm: string | null;
+    parameterCookie: string | null;
+    requestBody: ModelWithString | null;
+    parameterPath1?: string;
+    parameterPath2?: string;
+    parameterPath3?: string;
+    _default?: string;
+}) {
+    const res = await client.parameters.callWithWeirdParameterNames(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Parameters/getCallWithOptionalParamService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    requestBody: ModelWithString;
+    parameter?: string;
+}) {
+    const res = await client.parameters.getCallWithOptionalParam(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Parameters/postCallWithOptionalParamService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameter: Pageable;
+    requestBody?: ModelWithString;
+}) {
+    const res = await client.parameters.postCallWithOptionalParam(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/RequestBody/postApiRequestBodyService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameter?: string;
+    requestBody?: ModelWithString;
+}) {
+    const res = await client.requestBody.postApiRequestBody(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Response/callWithDuplicateResponsesService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.response.callWithDuplicateResponses(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Response/callWithResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.response.callWithResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Response/callWithResponsesService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.response.callWithResponses(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Simple/deleteCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.deleteCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Simple/getCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.getCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Simple/headCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.headCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Simple/optionsCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.optionsCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Simple/patchCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.patchCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Simple/postCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.postCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Simple/putCallWithoutParametersAndResponseService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+}) {
+    const res = await client.simple.putCallWithoutParametersAndResponse(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Types/typesService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    parameterArray: Array<string> | null;
+    parameterDictionary: Record<string, any> | null;
+    parameterEnum: 'Success' | 'Warning' | 'Error' | null;
+    parameterNumber: number = 123;
+    parameterString: string | null = 'default';
+    parameterBoolean: boolean | null = true;
+    parameterObject: Record<string, any> | null = null;
+    id?: number;
+}) {
+    const res = await client.types.types(args);
+
+    return res;
+}
+"
+`;
+
+exports[`v3 should generate: ./test/generated/v3/samples/Upload/uploadFileService.ts 1`] = `
+"import client from 'github-connector';
+
+export default async function main(args: {
+    file: Blob;
+}) {
+    const res = await client.upload.uploadFile(args);
+
+    return res;
+}
 "
 `;
 

@@ -11,6 +11,7 @@ import { writeClientClass } from './writeClientClass';
 import { writeClientCore } from './writeClientCore';
 import { writeClientIndex } from './writeClientIndex';
 import { writeClientModels } from './writeClientModels';
+import { writeClientSamples } from './writeClientSamples';
 import { writeClientSchemas } from './writeClientSchemas';
 import { writeClientServices } from './writeClientServices';
 
@@ -24,6 +25,7 @@ import { writeClientServices } from './writeClientServices';
  * @param useUnionTypes Use union types instead of enums
  * @param exportCore Generate core client classes
  * @param exportServices Generate services
+ * @param exportSamples Generate samples
  * @param exportModels Generate models
  * @param exportSchemas Generate schemas
  * @param exportSchemas Generate schemas
@@ -41,6 +43,7 @@ export const writeClient = async (
     useOptions: boolean,
     useUnionTypes: boolean,
     exportCore: boolean,
+    exportSamples: boolean,
     exportServices: boolean,
     exportModels: boolean,
     exportSchemas: boolean,
@@ -55,6 +58,7 @@ export const writeClient = async (
     const outputPathModels = resolve(outputPath, 'models');
     const outputPathSchemas = resolve(outputPath, 'schemas');
     const outputPathServices = resolve(outputPath, 'services');
+    const outputPathSamples = resolve(outputPath, 'samples');
 
     if (!isSubDirectory(process.cwd(), output)) {
         throw new Error(`Output folder is not a subdirectory of the current working directory`);
@@ -78,6 +82,22 @@ export const writeClient = async (
             useOptions,
             indent,
             postfixServices,
+            clientName
+        );
+    }
+
+    if (exportSamples) {
+        await rmdir(outputPathSamples);
+        await mkdir(outputPathSamples);
+        await writeClientSamples(
+            client.services,
+            templates,
+            outputPathSamples,
+            httpClient,
+            useUnionTypes,
+            useOptions,
+            indent,
+            '',
             clientName
         );
     }

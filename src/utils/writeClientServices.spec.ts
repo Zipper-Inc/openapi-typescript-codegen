@@ -24,6 +24,7 @@ describe('writeClientServices', () => {
             client: () => 'client',
             exports: {
                 model: () => 'model',
+                sample: () => 'sample',
                 schema: () => 'schema',
                 service: () => 'service',
             },
