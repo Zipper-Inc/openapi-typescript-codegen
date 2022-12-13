@@ -40,7 +40,7 @@ if (OpenAPI) {
         useOptions: params.useOptions,
         useUnionTypes: params.useUnionTypes,
         exportCore: JSON.parse(params.exportCore) === true,
-        exportSamples: JSON.parse(params.exportSamples) === true,
+        exportSamples: JSON.parse(params.exportSamples) === false,
         exportServices: JSON.parse(params.exportServices) === true,
         exportModels: JSON.parse(params.exportModels) === true,
         exportSchemas: JSON.parse(params.exportSchemas) === true,
